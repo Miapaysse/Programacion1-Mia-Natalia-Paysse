@@ -3,28 +3,40 @@
 #define N 2
 
 int main(void){
-	double **mat;
-	mat=(double**) calloc(N,8*N);
-	if (mat!=NULL){
-		int i;
+	double ** mat;
+	int i,j;
+	mat=(double**) calloc(N,sizeof(double*)); //reservamos un espacio para un arreglo de N punteros a double
+	if(mat==NULL){
+		printf("ERROR");
+		return 1;	
+	}
+		
 		for(i=0;i<N;i++){
-			mat[i][i]=1;
+			mat[i]=(double*) calloc(N,sizeof(double));
+				
+			if(mat[i]==NULL){
+				printf("ERROR");
+				return 1;
+			}
+			
 		}
 		
 		for(i=0;i<N;i++){
-			for(i=0;i<N;i++){
-				printf("%.2f ",mat[i][i]);
+				mat[i][i]=1;
+		}
+		
+		for(i=0;i<N;i++){
+			for(j=0;j<N;j++){
+				printf("%.0f ",mat[i][j]);
 				
 			}
 			printf("\n");
 		}
 		
-		
-	}
-	
-	printf("ERROR");
-	
-	free(mat);
+		for(i=0;i<N;i++){
+			free(mat[i]);
+		}
+		free(mat);
 
 return 0;
 }
