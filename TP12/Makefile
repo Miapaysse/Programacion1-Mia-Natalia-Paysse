@@ -2,7 +2,7 @@
 simular: main.o simuladorPuertos.o manejoLEDS.o
 	gcc -Wall -g -o simular main.o simuladorPuertos.o manejoLEDS.o
 
-main.o: simuladorPuertos.h main.c
+main.o: simuladorPuertos.h manejoLEDS.h main.c
 	gcc -c -Wall main.c
 
 manejoLEDS.o: manejoLEDS.h simuladorPuertos.h manejoLEDS.c

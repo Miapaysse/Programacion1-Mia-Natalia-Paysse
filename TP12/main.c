@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "manejoLEDS.h"
 #include "simuladorPuertos.h"
+
 #define ISLETTER(c) (  ( ('a'<=(c)) && ((c)<='z') )||( ('A'<=(c)) && ((c)<='Z') )  )
 #define ISNUMBER(c) ( ('0'<=(c)) && ((c)<='9') )
 
@@ -17,11 +19,11 @@ apagarse y si están apagados encenderse).
 
 int main(void){
 
-char accion;
+char accion = 9;
 
 puertoUsuario_t puertoA = A;
 
-imprimir_LEDS(puertoA);
+mostrarLEDS(puertoA);
 
 while (accion != 'q'){
 

@@ -1,3 +1,6 @@
+#ifndef SIMULADORPUERTOS_H
+#define SIMULADORPUERTOS_H
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
@@ -61,3 +64,4 @@ word_t x16b;
 }puertos_t;
 
 
+#endif

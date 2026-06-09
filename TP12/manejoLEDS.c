@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "manejoLEDS.h"
+#include "simuladorPuertos.h"
 
-
+/*
 //PINES DE MI PLACA DE IZQUIERDA A DERECHA
 //0
 pin_t pin17;
@@ -52,7 +52,18 @@ pin22.value_path="/sys/class/gpio/gpio27/value";
 pin22.direction_path="/sys/class/gpio/gpio27/direction";
 pin22.number="27";
 
-pin_t pines[8]={pin17, pin4, pin18, pin23, pin24, pin25, pin22, pin27};
+*/
+
+pin_t pines[8] = {
+    {"/sys/class/gpio/gpio17/value", "/sys/class/gpio/gpio17/direction", "17", '0'}, // 0
+    {"/sys/class/gpio/gpio4/value",  "/sys/class/gpio/gpio4/direction",  "4",  '0'}, // 1
+    {"/sys/class/gpio/gpio18/value", "/sys/class/gpio/gpio18/direction", "18", '0'}, // 2
+    {"/sys/class/gpio/gpio23/value", "/sys/class/gpio/gpio23/direction", "23", '0'}, // 3
+    {"/sys/class/gpio/gpio24/value", "/sys/class/gpio/gpio24/direction", "24", '0'}, // 4
+    {"/sys/class/gpio/gpio25/value", "/sys/class/gpio/gpio25/direction", "25", '0'}, // 5
+    {"/sys/class/gpio/gpio22/value", "/sys/class/gpio/gpio22/direction", "22", '0'}, // 6
+    {"/sys/class/gpio/gpio27/value", "/sys/class/gpio/gpio27/direction", "27", '0'}  // 7
+};
 
 int mostrarLED(pin_t pin) {
     FILE *handle_export;
@@ -113,6 +124,8 @@ int mostrarLED(pin_t pin) {
 }
 
 void mostrarLEDS(puertoUsuario_t puertoUsado){
+
+    int i;
 
 			for(i=7; i>=0; i--){
                 
