@@ -24,7 +24,7 @@ static uint16_t * getPuertoD(void){
 	return &(contenido_puertos.x16b.D);
 }
 ////////////////////////////////////////////
-void imprimir_LEDS(puertoUsuario_t puertoUsado){
+/*void imprimir_LEDS(puertoUsuario_t puertoUsado){
 
 	switch (puertoUsado){
 		case A:
@@ -56,7 +56,7 @@ void imprimir_LEDS(puertoUsuario_t puertoUsado){
 		break;
 	}
 
-}
+}*/
 ////////////////////////////////////////////
 
 void bitSet(puertoUsuario_t puertoUsado, int bit){

@@ -1,0 +1,5 @@
+• Servidor: raspberrypi.local
+• Nombre de usuario: pi
+• Contraseña: gedageda
+• Puerto: 22
+

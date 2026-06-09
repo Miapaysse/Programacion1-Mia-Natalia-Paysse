@@ -35,17 +35,17 @@ while (accion != 'q'){
 	
 			case 't':
 				maskToggle(puertoA,0xFF);
-				imprimir_LEDS(puertoA);
+				mostrarLEDS(puertoA);
 			break;
 	
 			case 'c':
 				maskOff(puertoA, 0xFF);
-				imprimir_LEDS(puertoA);
+				mostrarLEDS(puertoA);
 			break;
 	
 			case 's':
 				maskOn(puertoA, 0xFF);
-				imprimir_LEDS(puertoA);
+				mostrarLEDS(puertoA);
 			break;
 			
 			default:
@@ -57,7 +57,7 @@ while (accion != 'q'){
 
 	else if (ISNUMBER(accion) && (int)(accion-'0') < 8 && (int)(accion-'0') >= 0){
 		bitSet(puertoA, (int)(accion-'0'));
-		imprimir_LEDS(puertoA);
+		mostrarLEDS(puertoA);
 	}
 	
 	else {

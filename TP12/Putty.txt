@@ -1,0 +1,3 @@
+Host: pi@raspberrypi.local
+Port: 22
+pass: gedageda

@@ -30,7 +30,7 @@ encuentra en el estado 0x02, al aplicarle la máscara 0x03, el resultado será
 
 typedef enum { A, B, D} puertoUsuario_t;
 
-void imprimir_LEDS(puertoUsuario_t puertoUsado);
+//void imprimir_LEDS(puertoUsuario_t puertoUsado);
 
 void bitSet(puertoUsuario_t puertoUsado, int bit);
 void bitClr(puertoUsuario_t puertoUsado, int bit);
