@@ -1,0 +1,16 @@
+
+play: main.o frontEnd.o backEnd.o
+	gcc -Wall -g -o play main.o frontEnd.o backEnd.o
+
+main.o: config.h frontEnd.h backEnd.h main.c
+	gcc -c -Wall main.c
+
+frontEnd.o: config.h frontEnd.h frontEnd.c
+	gcc -c -Wall frontEnd.c
+	
+backEnd.o: config.h backEnd.h backEnd.c
+	gcc -c -Wall backEnd.c
+
+# Limpieza
+clean:
+	rm -f *.o play

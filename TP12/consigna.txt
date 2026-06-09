@@ -1,0 +1,13 @@
+Introducción
+Se pide controlar 8 leds conectados a una placa Raspberry Pii (RPI), la cual tiene
+instalado el sistema operativo Linux y se encuentra ejecutando su programa desde la
+consola. Los comandos para controlar los leds se ingresarán por consola, y son los
+mismos que en el ejercicio 6 del TP9, a saber:
+
+
+• Por teclado, el usuario ingresará el número (del 0 al 7) del LED que se desea
+prender, en tiempo real.
+• Con la letra 't', todos los LEDs deben cambiar al estado opuesto (si están encendidos
+apagarse y si están apagados encenderse).
+• Con la letra 'c', se deberán apagar todos, y con 's', prender todos.
+• Con la letra 'q', el programa finalizará.
