@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include "simuladorPuertos.h"
-
 /*
 //PINES DE MI PLACA DE IZQUIERDA A DERECHA
 //0
@@ -87,7 +87,7 @@ int mostrarLED(pin_t pin) {
     }
     fclose(handle_export); 
 
-
+    usleep(100000); //le doy tiempo al S/O
     // --- 2. CONFIGURAR DIRECCIÓN (SALIDA) ---
     if ((handle_direction = fopen(pin.direction_path, "w")) == NULL) {
         printf("Cannot open DIRECTION File.\n");
