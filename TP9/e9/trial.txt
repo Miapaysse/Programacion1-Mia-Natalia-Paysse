@@ -1,0 +1,47 @@
+uint8_t * puertoA = getPuertoA();
+uint8_t * puertoB = getPuertoB();
+uint16_t * puertoD = getPuertoD();
+
+printf("\nInicio:\nPuerto A: %04x, Puerto B: %04x, Puerto D: %04x\n", (*puertoA), (*puertoB), (*puertoD));
+printf("\nb0 B: %d\n", bitGet(puertoB,0));
+printf("\nb0 A: %d\n", bitGet(puertoA,0));
+printf("\nb0 D: %d\n", bitGet(puertoD,0));
+
+maskOn(puertoD,0xFF);
+printf("\n1ra operacion:\nPuerto A: %04x, Puerto B: %04x, Puerto D: %04x\n", (*puertoA), (*puertoB), (*puertoD));
+printf("\nb0 B: %d\n", bitGet(puertoB,0));
+printf("\nb0 A: %d\n", bitGet(puertoA,0));
+printf("\nb0 D: %d\n", bitGet(puertoD,0));
+
+bitClr(puertoD,0);
+bitSet(puertoA,0);
+printf("\n2da operacion:\nPuerto A: %04x, Puerto B: %04x, Puerto D: %04x\n", (*puertoA), (*puertoB), (*puertoD));
+printf("\nb0 B: %d\n", bitGet(puertoB,0));
+printf("\nb0 A: %d\n", bitGet(puertoA,0));
+printf("\nb0 D: %d\n", bitGet(puertoD,0));
+
+maskToggle(puertoA,0xFF);
+printf("\noperacion:\nPuerto A: %04x, Puerto B: %04x, Puerto D: %04x\n", (*puertoA), (*puertoB), (*puertoD));
+printf("\nb0 B: %d\n", bitGet(puertoB,0));
+printf("\nb0 A: %d\n", bitGet(puertoA,0));
+printf("\nb0 D: %d\n", bitGet(puertoD,0));
+
+bitToggle(puertoB,0);
+printf("\noperacion:\nPuerto A: %04x, Puerto B: %04x, Puerto D: %04x\n", (*puertoA), (*puertoB), (*puertoD));
+printf("\nb0 B: %d\n", bitGet(puertoB,0));
+printf("\nb0 A: %d\n", bitGet(puertoA,0));
+printf("\nb0 D: %d\n", bitGet(puertoD,0));
+
+maskOn(puertoB, 0xFF);
+maskOn(puertoA, 0xFF);
+printf("\noperacion:\nPuerto A: %04x, Puerto B: %04x, Puerto D: %04x\n", (*puertoA), (*puertoB), (*puertoD));
+printf("\nb0 B: %d\n", bitGet(puertoB,0));
+printf("\nb0 A: %d\n", bitGet(puertoA,0));
+printf("\nb0 D: %d\n", bitGet(puertoD,0));
+
+maskOff(puertoD, 0xFF);
+maskOff(puertoA, 0xFF);
+printf("\noperacion:\nPuerto A: %04x, Puerto B: %04x, Puerto D: %04x\n", (*puertoA), (*puertoB), (*puertoD));
+printf("\nb0 B: %d\n", bitGet(puertoB,0));
+printf("\nb0 A: %d\n", bitGet(puertoA,0));
+printf("\nb0 D: %d\n", bitGet(puertoD,0));
