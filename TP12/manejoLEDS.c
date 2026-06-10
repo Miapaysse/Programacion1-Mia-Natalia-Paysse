@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include "simuladorPuertos.h"
+#include "manejoLEDS.h"
 /*
 //PINES DE MI PLACA DE IZQUIERDA A DERECHA
 //0
