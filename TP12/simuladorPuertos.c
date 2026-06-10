@@ -61,58 +61,58 @@ static uint16_t * getPuertoD(void){
 
 void bitSet(puertoUsuario_t puertoUsado, int bit){
 	switch (puertoUsado){
-		case A:
+		case A:{
 			uint8_t * puertoA = getPuertoA();
 			(*(puertoA))|= (1u<<(bit));
-		break;
+		}break;
 		
-		case B:
+		case B:{
 			uint8_t * puertoB = getPuertoB();
 			(*(puertoB))|= (1u<<(bit));
-		break;
+		}break;
 		
-		case D:
+		case D:{
 			uint16_t * puertoD = getPuertoD();
 			(*(puertoD))|= (1u<<(bit));
-		break;
+		}break;
 	}
 }
 
 void bitClr(puertoUsuario_t puertoUsado, int bit){
 	switch (puertoUsado){
-		case A:
+		case A:{
 			uint8_t * puertoA = getPuertoA();
 			(*(puertoA)) &= ~(1u<<(bit));
-		break;
+		}break;
 		
-		case B:
+		case B:{
 			uint8_t * puertoB = getPuertoB();
 			(*(puertoB)) &= ~(1u<<(bit));
-		break;
+		}break;
 		
-		case D:
+		case D:{
 			uint16_t * puertoD = getPuertoD();
 			(*(puertoD)) &= ~(1u<<(bit));
-		break;
+		}break;
 	}
 }
 
 int bitGet(puertoUsuario_t puertoUsado, int bit){
 	switch (puertoUsado){
-		case A:
+		case A:{
 			uint8_t * puertoA = getPuertoA();
 			return ((*(puertoA))>>(bit)) & (1u);
-		break;
+		}break;
 		
-		case B:
+		case B:{
 			uint8_t * puertoB = getPuertoB();
 			return ((*(puertoB))>>(bit)) & (1u);
-		break;
+		}break;
 		
-		case D:
+		case D:{
 			uint16_t * puertoD = getPuertoD();
 			return ((*(puertoD))>>(bit)) & (1u);
-		break;
+		}break;
 	}
 	
 	return 0;
@@ -120,77 +120,77 @@ int bitGet(puertoUsuario_t puertoUsado, int bit){
 
 void bitToggle(puertoUsuario_t puertoUsado, int bit){
 	switch (puertoUsado){
-		case A:
+		case A:{
 			uint8_t * puertoA = getPuertoA();
 			(*(puertoA)) ^= (1u<<(bit));
-		break;
+		}break;
 		
-		case B:
+		case B:{
 			uint8_t * puertoB = getPuertoB();
 			(*(puertoB)) ^= (1u<<(bit));
-		break;
+		}break;
 		
-		case D:
+		case D:{
 			uint16_t * puertoD = getPuertoD();
 			(*(puertoD)) ^= (1u<<(bit));
-		break;
+		}break;
 	}
 }
 
 void maskOn(puertoUsuario_t puertoUsado, int mask){
 	switch (puertoUsado){
-		case A:
+		case A:{
 			uint8_t * puertoA = getPuertoA();
 			(*(puertoA)) |= (mask);
-		break;
+		}break;
 		
-		case B:
+		case B:{
 			uint8_t * puertoB = getPuertoB();
 			(*(puertoB)) |= (mask);
-		break;
+		}break;
 		
-		case D:
+		case D:{
 			uint16_t * puertoD = getPuertoD();
 			(*(puertoD)) |= (mask);
-		break;
+		}break;
 	}
 }
 
 void maskOff(puertoUsuario_t puertoUsado, int mask){
 	switch (puertoUsado){
-		case A:
+		case A:{
 			uint8_t * puertoA = getPuertoA();
 			(*(puertoA))^=((*(puertoA))&(mask));
-		break;
+		}break;
 		
-		case B:
+		case B:{
 			uint8_t * puertoB = getPuertoB();
 			(*(puertoB))^=((*(puertoB))&(mask));
-		break;
+		}break;
 		
-		case D:
+		case D:{
 			uint16_t * puertoD = getPuertoD();
 			(*(puertoD))^=((*(puertoD))&(mask));
-		break;
+		}break;
 	}
 }
 
 void maskToggle(puertoUsuario_t puertoUsado, int mask){
 	switch (puertoUsado){
-		case A:
+		case A:{
 			uint8_t * puertoA = getPuertoA();
 			(*(puertoA)) ^= (mask);
-		break;
+		}break;
 		
-		case B:
+		case B:{
 			uint8_t * puertoB = getPuertoB();
 			(*(puertoB)) ^= (mask);
-		break;
+		}break;
 		
-		case D:
+		case D:{
 			uint16_t * puertoD = getPuertoD();
 			(*(puertoD)) ^= (mask);
-		break;
+		}break;
 	}
 }
 
